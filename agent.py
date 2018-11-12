@@ -2,8 +2,8 @@ import numpy as np
 
 
 class Agent(object):
-    def __init__(self, x, y, theta):
-        self.v = 0.3
+    def __init__(self, x, y, theta, v):
+        self.v = v
         self.x = x
         self.y = y
         self.theta = theta
