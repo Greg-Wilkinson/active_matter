@@ -1,7 +1,7 @@
 import unittest
 import numpy as np
 
-from src.agent import Agent
+from agent import Agent
 
 
 class TestAgent(unittest.TestCase):
@@ -11,8 +11,8 @@ class TestAgent(unittest.TestCase):
             angles = [-np.pi + rotation, -np.pi/2 + rotation]
             expected = -np.pi + np.pi/4 + rotation
             a = Agent(0, 0, expected)
-            actual = a.average_direction(angles)
-            self.assertAlmostEqual(expected, actual)
+            a.average_direction(angles)
+            self.assertAlmostEqual(expected, a.new_theta)
 
 
 if __name__ == '__main__':
