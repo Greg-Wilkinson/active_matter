@@ -26,7 +26,6 @@ class Agent(object):
         self.x += self.v * np.cos(self.theta)
         self.y += self.v * np.sin(self.theta)
 
-
     def apply_periodic_boundary(self, L):
         if self.x < 0:
             self.x += L

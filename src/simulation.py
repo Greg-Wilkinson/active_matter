@@ -4,6 +4,7 @@ from numpy import pi, cos, sin
 import matplotlib
 import matplotlib.pyplot as plt
 
+
 class Simulation(object):
     def __init__(self, N, L, temp, duration, r=1, v=0.3):
         self.L = L
@@ -59,7 +60,7 @@ class Simulation(object):
         plt.quiver(x, y, vx, vy)
         plt.xlim((0, self.L))
         plt.ylim((0, self.L))
-        plt.pause(0.05)
+        plt.pause(0.0001)
         plt.clf()
 
 
